@@ -1,1 +1,1 @@
-#YSUI 基于 web components 的组件库
+YSUI 基于 web components 的组件库
