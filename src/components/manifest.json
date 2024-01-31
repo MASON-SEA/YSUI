@@ -1,0 +1,13 @@
+{
+  "name": "ORUI",
+  "short_name": "ORUI",
+  "start_url": "/components/index.html",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
