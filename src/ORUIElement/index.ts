@@ -1,5 +1,3 @@
-import {Cache} from "./cache/index";
-
 export interface Info{
     viewName:string;
     name:string;
@@ -57,7 +55,7 @@ class ORUIElement extends HTMLElement {
 
     constructor() {
         super();
-        this.attachShadow( {mode: 'open'});
+        this.attachShadow({mode: 'open'});
     }
 
     //获取属性描述

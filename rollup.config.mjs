@@ -1,13 +1,16 @@
 import typescript from '@rollup/plugin-typescript';
-import { uglify } from "rollup-plugin-uglify";
+import css from "rollup-plugin-import-css";
+// import less from 'rollup-plugin-less';
+// import { uglify } from "rollup-plugin-uglify";
 
 export default {
     input: 'rollup.common.ts',
     output: {
-        file: './build/bundle.js'
+        file: 'dist/index.js'
     },
     plugins: [
+        css(),
         typescript(),
-        uglify()
+        // uglify()
     ]
 };

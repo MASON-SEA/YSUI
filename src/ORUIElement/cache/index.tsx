@@ -1,8 +1,9 @@
 import {ORUI, ORUIElement} from "../index";
+import styles from "./index.css";
 
 export class Cache extends ORUIElement {
     init() {
-        this.import_css('/components/cache/index.css');
+        this.import_css(styles);
     }
 
     append(...dom) {
