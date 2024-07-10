@@ -1,0 +1,32 @@
+{
+  "name": "ys-ui",
+  "version": "1.0.0",
+  "description": "基于YSElement的web components组件库",
+  "main": "dist/index.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MASON-SEA/YSUI.git"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  },
+  "keywords": [
+    "web components"
+  ],
+  "author": "MASON-SEA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MASON-SEA/YSUI/issues"
+  },
+  "homepage": "https://github.com/MASON-SEA/YSUI#readme",
+  "devDependencies": {
+    "less": "^4.2.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  },
+  "dependencies": {
+    "yselement": "^1.1.1"
+  }
+}
