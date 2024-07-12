@@ -1,8 +1,13 @@
 {
-  "name": "ys-ui",
-  "version": "1.0.0",
+  "name": "ysuid",
+  "version": "1.0.3",
   "description": "基于YSElement的web components组件库",
-  "main": "dist/index.es.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
