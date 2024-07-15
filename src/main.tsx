@@ -1,8 +1,8 @@
 import { YSUI } from "yselement";
-import { TileDemo } from "./examples/grid";
+import GridDemo from "./examples/grid";
 import "./index";
 
-export function GridDemo() {
+export function FlexDemo() {
   const html = (
       <ysui-flex>
           <ysui-row>
@@ -26,4 +26,4 @@ export function GridDemo() {
   return html
 }
 
-document.getElementById("app").appendChild(<TileDemo />);
+document.getElementById("app").appendChild(<GridDemo />);
