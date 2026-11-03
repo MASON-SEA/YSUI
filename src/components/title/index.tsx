@@ -1,4 +1,4 @@
-import { YSUI, YSElement, custom_element, use_ref } from "yselement";
+import { YSUI, YSElement, custom_element } from "yselement";
 import style from "./index.less?inline";
 
 @custom_element("ysui-title")
@@ -16,43 +16,52 @@ export class Title extends YSElement {
   text: string;
   title_ctr: HTMLElement;
   custom_style: string;
+
   init() {
     this.import_css(style);
-    const titleRef = use_ref();
+    const titleRef = { current: null as HTMLElement | null };
     const html = (
-      <ysui-grid size="small">
-        <ysui-row grow="0" align="center">
+      <ysui-flex gap="0">
+        <ysui-row grow={0} align="center" gap="0">
           <ysui-col ref={titleRef} className="ysui_title"></ysui-col>
-          <ysui-col grow="0" size="small">
+          <ysui-col grow={0} size="small">
             <slot name="right" />
           </ysui-col>
         </ysui-row>
         <ysui-row>
           <slot />
         </ysui-row>
-      </ysui-grid>
+      </ysui-flex>
     );
-    this.title_ctr = titleRef.current;
-    this.shadowRoot.append(html);
+    this.title_ctr = titleRef.current as HTMLElement;
+    this.shadowRoot!.append(html);
+  }
+
+  update(name: string) {
+    if (name === "text") {
+      this.render_text();
+    } else if (name === "custom_style") {
+      this.init_custom_style();
+    }
+  }
+
+  render_text() {
+    if (this.title_ctr) this.title_ctr.innerHTML = this.text;
   }
 
   render() {
-    this.title_ctr.innerHTML = this.text;
+    this.render_text();
     this.init_custom_style();
   }
 
   init_custom_style() {
-    let style = this.custom_style;
-    let styles = style.split(";");
-    styles.map((s) => {
-      var k_v = s.split(":");
-      this.title_ctr.style[k_v[0]] = k_v[1];
+    if (!this.title_ctr) return;
+    const styleText = this.custom_style || "";
+    styleText.split(";").forEach((s) => {
+      const [k, v] = s.split(":").map((x) => x?.trim());
+      if (k && v) {
+        (this.title_ctr.style as any)[k] = v;
+      }
     });
-    // for(var k in styles) {
-    //     this.style[k] = styles
-    // }
-    // if (style) {
-    //     this.style.cssText = style
-    // }
   }
 }

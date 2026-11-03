@@ -1,6 +1,6 @@
 {
   "name": "ysuid",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "基于YSElement的web components组件库",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MASON-SEA/YSUI.git"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    "url": "git+https://github.com/MASON-SEA/YSUI.git"
   },
   "keywords": [
     "web components"
@@ -27,11 +27,21 @@
   },
   "homepage": "https://github.com/MASON-SEA/YSUI#readme",
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "less": "^4.2.0",
     "typescript": "^5.5.3",
     "vite": "^5.3.3"
   },
   "dependencies": {
-    "yselement": "^1.1.1"
+    "yselement": "^1.2.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./library.css": "./dist/es/library.css",
+    "./package.json": "./package.json"
   }
 }
