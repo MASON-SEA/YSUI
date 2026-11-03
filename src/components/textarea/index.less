@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--ysui-font-family);
+}
+
+.ysui-textarea {
+  display: block;
+  width: 100%;
+  min-height: 72px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 11px;
+  border: 1px solid var(--ysui-color-border);
+  border-radius: var(--ysui-radius-s);
+  background: var(--ysui-color-background);
+  color: var(--ysui-color-text);
+  font: inherit;
+  font-size: var(--ysui-font-size-main);
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ysui-textarea:hover:not(:disabled) {
+  border-color: var(--ysui-color-primary);
+}
+
+.ysui-textarea:focus {
+  border-color: var(--ysui-color-primary);
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15);
+}
+
+.ysui-textarea:disabled {
+  background: var(--ysui-color-disabled);
+  color: var(--ysui-color-weak);
+  cursor: not-allowed;
+  resize: none;
+}

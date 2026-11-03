@@ -37,18 +37,25 @@ npm install ysuid yselement
 | `ysui-row` / `ysui-col` | 行 / 列 |
 | `ysui-grid` / `ysui-grid-item` | CSS Grid 宫格 |
 | `ysui-title` | 标题区（左文案 + 右侧插槽） |
+| `ysui-button` | 按钮（primary / default / dashed / text / link） |
+| `ysui-input` | 单行输入，`input` / `change` 事件带 `detail.value` |
+| `ysui-textarea` | 多行输入 |
+| `ysui-tag` | 标签，可关闭 |
+| `ysui-card` | 卡片（title / extra / body 插槽） |
+| `ysui-badge` | 徽标（count / dot） |
+| `ysui-modal` | 居中弹层（open / maskClosable） |
+| `ysui-empty` | 空状态 |
+| `ysui-divider` | 分割线（horizontal / vertical） |
 
 ```ts
 import "ysuid"; // 注册全部自定义元素
 // 或按需
-import { Space, Flex, Row, Col, Grid, GridItem, Title } from "ysuid";
+import { Space, Flex, Row, Col, Button, Input, Card, Modal, Tag, Empty } from "ysuid";
 ```
 
 ```html
-<ysui-flex>
-  <ysui-row>
-    <ysui-col>A</ysui-col>
-    <ysui-col>B</ysui-col>
-  </ysui-row>
-</ysui-flex>
+<ysui-card title="任务">
+  <ysui-tag color="primary">进行中</ysui-tag>
+  <ysui-button type="primary">新建</ysui-button>
+</ysui-card>
 ```

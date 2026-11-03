@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+  margin: var(--ysui-gap-m) 0;
+  box-sizing: border-box;
+}
+
+:host(.is-vertical) {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  height: 0.9em;
+  margin: 0 var(--ysui-gap-s);
+  vertical-align: middle;
+}
+
+.ysui-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--divider-color, var(--ysui-color-border));
+}
+
+:host(.is-dashed) .ysui-divider {
+  background: none;
+  border-top: 1px dashed var(--divider-color, var(--ysui-color-border));
+  height: 0;
+}
+
+:host(.is-vertical) .ysui-divider {
+  width: 1px;
+  height: 100%;
+}
+
+:host(.is-vertical.is-dashed) .ysui-divider {
+  border-top: 0;
+  border-left: 1px dashed var(--divider-color, var(--ysui-color-border));
+  width: 0;
+}

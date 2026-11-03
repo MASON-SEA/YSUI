@@ -1,0 +1,52 @@
+:host {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  font-family: var(--ysui-font-family);
+}
+
+.ysui-badge {
+  display: inline-flex;
+  position: relative;
+  max-width: 100%;
+}
+
+.ysui-badge__content {
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.ysui-badge__mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  box-sizing: border-box;
+  background: var(--ysui-color-danger);
+  color: var(--ysui-color-text-light-solid);
+  box-shadow: 0 0 0 1px var(--ysui-color-background);
+}
+
+.ysui-badge__mark[hidden] {
+  display: none;
+}
+
+.ysui-badge__mark--dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  min-width: 0;
+  padding: 0;
+}
+
+.ysui-badge__mark--count {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}

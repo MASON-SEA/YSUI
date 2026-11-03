@@ -1,0 +1,103 @@
+:host {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-family: var(--ysui-font-family);
+}
+
+.ysui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ysui-gap-min);
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid var(--ysui-color-border);
+  border-radius: var(--ysui-radius-s);
+  background: var(--ysui-color-background);
+  color: var(--ysui-color-text);
+  font: inherit;
+  font-size: var(--ysui-font-size-main);
+  line-height: 1.2;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ysui-btn:hover:not(:disabled) {
+  border-color: var(--ysui-color-primary);
+  color: var(--ysui-color-primary);
+}
+
+.ysui-btn:active:not(:disabled) {
+  opacity: 0.88;
+}
+
+.ysui-btn--small {
+  height: 24px;
+  padding: 0 8px;
+  font-size: var(--ysui-font-size-4);
+}
+
+.ysui-btn--middle {
+  height: 32px;
+  padding: 0 14px;
+}
+
+.ysui-btn--large {
+  height: 40px;
+  padding: 0 18px;
+  font-size: var(--ysui-font-size-6);
+  border-radius: var(--ysui-radius-sl);
+}
+
+.ysui-btn--block {
+  width: 100%;
+}
+
+.ysui-btn--primary {
+  background: var(--ysui-color-primary);
+  border-color: var(--ysui-color-primary);
+  color: var(--ysui-color-text-light-solid);
+}
+
+.ysui-btn--primary:hover:not(:disabled) {
+  background: var(--base-blue-5);
+  border-color: var(--base-blue-5);
+  color: var(--ysui-color-text-light-solid);
+}
+
+.ysui-btn--dashed {
+  border-style: dashed;
+  background: transparent;
+}
+
+.ysui-btn--text,
+.ysui-btn--link {
+  border-color: transparent;
+  background: transparent;
+  color: var(--ysui-color-text);
+  box-shadow: none;
+}
+
+.ysui-btn--link {
+  color: var(--ysui-color-primary);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.ysui-btn--text:hover:not(:disabled),
+.ysui-btn--link:hover:not(:disabled) {
+  background: var(--ysui-color-wathet);
+  border-color: transparent;
+  color: var(--ysui-color-primary);
+}
+
+.ysui-btn:disabled,
+.ysui-btn.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  color: var(--ysui-color-weak);
+  background: var(--ysui-color-disabled);
+  border-color: var(--ysui-color-border);
+}

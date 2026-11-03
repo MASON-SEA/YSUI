@@ -1,6 +1,6 @@
 {
   "name": "ysuid",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "基于YSElement的web components组件库",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",

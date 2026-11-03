@@ -1,0 +1,70 @@
+:host {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--ysui-font-family);
+  vertical-align: middle;
+}
+
+.ysui-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ysui-input {
+  width: 100%;
+  height: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 4px 28px 4px 11px;
+  border: 1px solid var(--ysui-color-border);
+  border-radius: var(--ysui-radius-s);
+  background: var(--ysui-color-background);
+  color: var(--ysui-color-text);
+  font: inherit;
+  font-size: var(--ysui-font-size-main);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ysui-input:hover:not(:disabled) {
+  border-color: var(--ysui-color-primary);
+}
+
+.ysui-input:focus {
+  border-color: var(--ysui-color-primary);
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15);
+}
+
+.ysui-input:disabled {
+  background: var(--ysui-color-disabled);
+  color: var(--ysui-color-weak);
+  cursor: not-allowed;
+}
+
+.ysui-input-clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ysui-color-light);
+  color: var(--ysui-color-white);
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.ysui-input-clear[hidden] {
+  display: none;
+}
+
+:host(.is-disabled) .ysui-input-clear {
+  display: none;
+}
