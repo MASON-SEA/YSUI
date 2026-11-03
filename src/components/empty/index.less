@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  font-family: var(--ysui-font-family);
+}
+
+.ysui-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ysui-gap-s);
+  padding: var(--ysui-padding-6) var(--ysui-padding-4);
+  color: var(--ysui-color-weak);
+  text-align: center;
+}
+
+.ysui-empty__icon {
+  font-size: 28px;
+  line-height: 1;
+  opacity: 0.55;
+}
+
+.ysui-empty__desc {
+  font-size: var(--ysui-font-size-5);
+  color: var(--ysui-color-description);
+}
+
+.ysui-empty__extra:empty {
+  display: none;
+}

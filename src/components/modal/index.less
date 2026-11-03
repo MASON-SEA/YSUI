@@ -1,0 +1,91 @@
+:host {
+  font-family: var(--ysui-font-family);
+}
+
+.ysui-modal[hidden] {
+  display: none !important;
+}
+
+.ysui-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.ysui-modal__mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.ysui-modal__wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.ysui-modal__dialog {
+  pointer-events: auto;
+  width: min(480px, 100%);
+  max-height: min(80vh, 720px);
+  display: flex;
+  flex-direction: column;
+  background: var(--ysui-color-background);
+  border-radius: var(--ysui-radius-l);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.ysui-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px 12px;
+}
+
+.ysui-modal__title {
+  font-size: var(--ysui-font-size-8);
+  font-weight: 600;
+  color: var(--ysui-color-text);
+}
+
+.ysui-modal__close {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: var(--ysui-radius-s);
+  background: transparent;
+  color: var(--ysui-color-weak);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ysui-modal__close:hover {
+  background: var(--ysui-color-background-weak);
+  color: var(--ysui-color-text);
+}
+
+.ysui-modal__body {
+  padding: 4px 20px 16px;
+  overflow: auto;
+  color: var(--ysui-color-text);
+  font-size: var(--ysui-font-size-main);
+}
+
+.ysui-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px 16px;
+}
+
+.ysui-modal__footer:empty {
+  display: none;
+}
