@@ -70,13 +70,45 @@ export class Space extends YSElement {
     this.shadowRoot.append(<slot/>);
   }
 
-  render() {
+  update(name: string) {
+    const handler: Record<string, () => void> = {
+      size: () => this.render_gap(),
+      gap: () => this.render_gap(),
+      direction: () => this.render_direction(),
+      align: () => this.render_align(),
+      wrap: () => this.render_wrap(),
+      justify: () => this.render_justify(),
+    };
+    handler[name]?.();
+  }
+
+  render_gap() {
     let gap = SIZE_TYPE[this.size];
     gap = this.gap !== "" ? this.gap : gap;
     this.style.setProperty("--gap-size", gap);
+  }
+
+  render_direction() {
     this.style.flexDirection = DIRECTION_TYPE[this.direction];
+  }
+
+  render_align() {
     this.style.alignItems = ALIGN_TYPE[this.align];
-    this.style.flexWrap = this.wrap ? "wrap" : "";
+  }
+
+  render_wrap() {
+    this.style.flexWrap = this.wrap ? "wrap" : "nowrap";
+  }
+
+  render_justify() {
     this.style.justifyContent = JUSTIFY_TYPE[this.justify];
+  }
+
+  render() {
+    this.render_gap();
+    this.render_direction();
+    this.render_align();
+    this.render_wrap();
+    this.render_justify();
   }
 }
